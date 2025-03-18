@@ -1,8 +1,20 @@
 import numpy as np
+from icecream import ic
 
-def load_function(idx, add=0):
+def load_function(idx, add=0,final=False):
     X = np.load(f'function_{idx}/initial_inputs.npy')
     y = np.load(f'function_{idx}/initial_outputs.npy')
+
+    Xf = np.load(f'final_data/function_{idx}/initial_inputs.npy')
+    yf = np.load(f'final_data/function_{idx}/initial_outputs.npy')
+
+    ic(X.shape,Xf.shape)
+
+    if final:
+        X =np.vstack((X,Xf))
+        # remember y is one dimensional
+        y = np.append(y, yf, axis=0)
+
 
     if add:
         X_n, y_n = add_points(idx,add )       
@@ -10,6 +22,9 @@ def load_function(idx, add=0):
         X =np.vstack((X,X_n))
         # remember y is one dimensional
         y = np.append(y, y_n, axis=0)
+
+        
+    
 
     return (X,y)
 
