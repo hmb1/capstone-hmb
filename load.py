@@ -33,9 +33,10 @@ def min_max_check(add=0):
     for idx in range(1,9): 
         X,y = load_function(idx, add, True) 
         print(f"function_{idx}")
-        print(f"initial block min={ np.min(y[0:10])}, max={ np.max(y[0:10])}")
+        print(f"initial block min={ np.min(y[0:10])}, max={ np.max(y[0:10])} ")
         print(f"final block min={ np.min(y[10:20])}, max={ np.max(y[10:20])}")
         print(f"user block min={ np.min(y[20:])}, max={ np.max(y[20:])}")
+        print(f"arg max index = { np.argmax(y)}")
     
     return
 
