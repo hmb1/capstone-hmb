@@ -28,6 +28,17 @@ def load_function(idx, add=0,final=False):
 
     return (X,y)
 
+
+def min_max_check(add=0):
+    for idx in range(1,9): 
+        X,y = load_function(idx, add, True) 
+        print(f"function_{idx}")
+        print(f"initial block min={ np.min(y[0:10])}, max={ np.max(y[0:10])}")
+        print(f"final block min={ np.min(y[10:20])}, max={ np.max(y[10:20])}")
+        print(f"user block min={ np.min(y[20:])}, max={ np.max(y[20:])}")
+    
+    return
+
 def add_points(idx,add=1):
         y = []
         X = np.array([])
@@ -117,6 +128,14 @@ def add_points(idx,add=1):
 
             X= np.concatenate((X,[X12[idx-1]]),axis=0)
             y.append(y12[(idx-1)])
+
+        if add >= 13:
+            X13 = [np.array([0.73347 , 0.547437]), np.array([0.179702, 0.079692]), np.array([0.987398, 0.001509, 0.601159]), np.array([0.971303, 0.880871, 0.980454, 0.893337]), np.array([0.014252, 0.093067, 0.754646, 0.990082]), np.array([0.001819, 0.959575, 0.030757, 0.019916, 0.95011 ]), np.array([0.008512, 0.105728, 0.71148 , 0.877262, 0.538832, 0.047781]), np.array([0.989766, 0.929733, 0.995595, 0.115323, 0.796422, 0.854034,
+       0.881461, 0.46289 ])]
+            y13 = [np.float64(5.887334665439911e-13), np.float64(0.010039725810332146), np.float64(-0.12013953852196312), np.float64(-44.481239000682585), np.float64(462.4446078360059), np.float64(-3.2246984258712126), np.float64(0.005340033216065258), np.float64(4.503678194345)]
+
+            X= np.concatenate((X,[X13[idx-1]]),axis=0)
+            y.append(y13[(idx-1)])
 
 
         # remember y is 1D    
