@@ -37,7 +37,7 @@ def min_max_check(add=0):
         print(f"final block min={ np.min(y[10:20])}, max={ np.max(y[10:20])}")
         print(f"user block min={ np.min(y[20:])}, max={ np.max(y[20:])}")
         print(f"arg max index = { np.argmax(y)}")
-    
+        print(f"arg_max points = {X[np.argmax(y)]}")
     return
 
 def add_points(idx,add=1):
