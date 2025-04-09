@@ -96,29 +96,17 @@ Set up the GP with default "GP" and lcb and kappa=0.1
 
 
 
+function_8
+----------------------------------------------------------------------------------------------------
+week1 to week5 
+Guessed the points best guess 9.942722150418
+
+week6 
+Set up GP with "EI" and xi=0.1
+week6-week8 
+no real improvment.
+Week 9-14 
+played with the length scale and the nu value but no real improvment
 
 
 
-
-
-
-            
-
-
-week 6 
-
-
-
-21/3/2025
-Most the points it has been commming up with are at the edges of the domain, typically (0,0),(1,0)
-So have made the fuction less explorative by setting Kappa=0.0 see how this goes 
-
-function_2
-21/3/2025
-Again the function has been seeking out point at the edges of the X,Y domain
-Try setting kappa=0.0
-
-
-function_5
-21/3/2025
-Changed guassion process from "EI" back to "LCB" set Kappa to 0.1 ?
