@@ -38,3 +38,9 @@ def plot3D(X, Y, Z, height=600, xlabel = "X", ylabel = "Y", zlabel = "Z", initia
     """
     htmlCode = "<iframe srcdoc='"+visCode+"' width='100%' height='" + str(height) + "px' style='border:0;' scrolling='no'> </iframe>"
     display(HTML(htmlCode))
+
+def plot_example():
+    X, Y = np.meshgrid(np.linspace(-3,3,50),np.linspace(-3,3,50))
+    Z = np.sin(X**2 + Y**2)**2/(X**2+Y**2)
+    plot3D(X, Y, Z)
+      

@@ -1,0 +1,124 @@
+21/3/2025
+Removed sign inversion of input Y values from all fuction processes
+
+function_1
+----------------------------------------------------------------------------------------------------
+We are seeking to find two maxima of this function.
+Week1-week 5 
+    First 3 points simple guesses - best point 0.5,0.5 
+
+Week6 
+    Set up skopt with the Least common bounds estimator LCB and set kappa at 1.0 
+
+Week7 - week 9  
+    Bounced aboout the  corners of the domain without any real improvment
+
+week11 - week 13 
+    changed kappa to zero -  prioritized expliotation over exploration.  
+ Slight improvment
+
+week 14 - changed kappa back to 0.1
+    best value 0.0023697618151689473
+
+
+function_2
+----------------------------------------------------------------------------------------------------
+We are seeking to find the maxima of this function
+Week1 - week5
+    Simple gussses - best guess  0.6954167327128791 
+
+    Set up skopt with LCB set kappa to 1.0, using the default base estimator "GP"   
+week 6 - week 10
+    Bounced about near the limits of the domain. no improvment
+
+week 11-14
+    Changed kappa to 0.1 do less exploring, but no improvment
+
+
+function_3
+----------------------------------------------------------------------------------------------------
+Week1 - week5 
+Attempted to work out the redundant dimension by permuting the values.
+This failed
+
+week6 
+    Set up gaussian process, acquistion function as LCB , set kappa=1
+    best value = -0.0017902770546808788
+
+week 6-10
+    bounced about the edges - not that bad but not good  
+week 11
+     Changed over to expected improvment EI acquisition function. with xi=0.01
+week 12 -week 14
+     Most values now in middle of domain but no real improvment.
+       
+
+
+function_4
+----------------------------------------------------------------------------------------------------
+week1 - week3
+Guessed the points for the first 3 weeks- best -3.754695676825303
+
+week 4
+set up gaussian EI acquistion function with xi=0.1
+week5-week10 
+No improvment - Switched from the default "GP" to regular defined Gaussian processsor agressor.
+
+week 8 - week 14
+no signficant improvment
+
+
+function 5
+----------------------------------------------------------------------------------------------------
+week1 - week5 
+guessed the points
+
+
+
+function 6
+----------------------------------------------------------------------------------------------------
+week1 - week 5
+Guessed the points best guess -0.6974609336778691
+
+week 6 add the GP with LCB, kappa=1.0  
+week7 - week 14  
+no significant improvment
+
+function_7
+----------------------------------------------------------------------------------------------------
+week1- week5 
+Guessed the points
+
+week6
+Set up the GP with default "GP" and lcb and kappa=0.1
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+week 6 
+
+
+
+21/3/2025
+Most the points it has been commming up with are at the edges of the domain, typically (0,0),(1,0)
+So have made the fuction less explorative by setting Kappa=0.0 see how this goes 
+
+function_2
+21/3/2025
+Again the function has been seeking out point at the edges of the X,Y domain
+Try setting kappa=0.0
+
+
+function_5
+21/3/2025
+Changed guassion process from "EI" back to "LCB" set Kappa to 0.1 ?
