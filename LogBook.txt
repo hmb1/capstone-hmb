@@ -1,112 +1,114 @@
-21/3/2025
-Removed sign inversion of input Y values from all fuction processes
+
+
+
+Capstone Summary
+
 
 function_1
-----------------------------------------------------------------------------------------------------
+
 We are seeking to find two maxima of this function.
-Week1-week 5 
-    First 3 points simple guesses - best point 0.5,0.5 
 
-Week6 
-    Set up skopt with the Least common bounds estimator LCB and set kappa at 1.0 
+week1-5 
+First 3 points simple guesses - best point 0.5,0.5 
+week 6 
+ Set up skopt with the Least common bounds estimator LCB and set kappa at 1.0 
+week7-9
+Bounced about the  corners of the domain without any real improvement
+week11-13
+changed kappa to zero -  prioritized exploitation n over exploration.
+Slight improvement.
 
-Week7 - week 9  
-    Bounced aboout the  corners of the domain without any real improvment
-
-week11 - week 13 
-    changed kappa to zero -  prioritized expliotation over exploration.  
- Slight improvment
-
-week 14 - changed kappa back to 0.1
-    best value 0.0023697618151689473
+Week 14 -
+changed kappa back to 0.1
+best value 0.0023697618151689473
 
 
 function_2
-----------------------------------------------------------------------------------------------------
+
 We are seeking to find the maxima of this function
-Week1 - week5
-    Simple gussses - best guess  0.6954167327128791 
 
-    Set up skopt with LCB set kappa to 1.0, using the default base estimator "GP"   
-week 6 - week 10
-    Bounced about near the limits of the domain. no improvment
-
+week 1-5
+ Simple guesses - best guess  0.6954167327128791 
+week 6
+Set up skopt with LCB set kappa to 1.0, using the default base estimator "GP"
+week 6 - 10
+Bounced about near the limits of the domain. no improvement
 week 11-14
-    Changed kappa to 0.1 do less exploring, but no improvment
+ changed kappa to 0.1 do less exploring, but no improvement
 
 
 function_3
-----------------------------------------------------------------------------------------------------
-Week1 - week5 
-Attempted to work out the redundant dimension by permuting the values.
-This failed
+
+week1-5 
+Attempted to work out the redundant dimension by permuting the values, of a single element.
 
 week6 
-    Set up gaussian process, acquistion function as LCB , set kappa=1
-    best value = -0.0017902770546808788
-
-week 6-10
-    bounced about the edges - not that bad but not good  
-week 11
-     Changed over to expected improvment EI acquisition function. with xi=0.01
-week 12 -week 14
-     Most values now in middle of domain but no real improvment.
-       
+Set up Gaussian process, acquisition function as LCB , set kappa=1
+week7-10
+best value = -0.0017902770546808788
+week 11-15
+no real improvement
 
 
 function_4
-----------------------------------------------------------------------------------------------------
-week1 - week3
+
+week1-3
 Guessed the points for the first 3 weeks- best -3.754695676825303
-
 week 4
-set up gaussian EI acquistion function with xi=0.1
-week5-week10 
-No improvment - Switched from the default "GP" to regular defined Gaussian processsor agressor.
-
-week 8 - week 14
-no signficant improvment
+set up Gaussian EI acquisition function with xi=0.1
+week5-10 
+no improvement
+week11
+ Switched from the default "GP" to regular defined Gaussian processor aggressor.
+week11-15
+no significant improvement
 
 
 function 5
-----------------------------------------------------------------------------------------------------
-week1 - week5 
+
+week1-5
 guessed the points
+week 6
+Set up Gaussian LCB acquisition function with kappa=1.0
 
-
+week 7 - week10 
+  no significant improvement  
+week11 
+    changed kappa to 0.1 
+week 12 - week 14  
+    No significant improvement.
 
 function 6
-----------------------------------------------------------------------------------------------------
+
 week1 - week 5
 Guessed the points best guess -0.6974609336778691
-
-week 6 add the GP with LCB, kappa=1.0  
+week 6 
+add the GP with LCB, kappa=1.0  
 week7 - week 14  
-no significant improvment
+no significant improvement
+
 
 function_7
-----------------------------------------------------------------------------------------------------
+
 week1- week5 
 Guessed the points
-
 week6
-Set up the GP with default "GP" and lcb and kappa=0.1
-
-
-
+Set up the GP with default "GP" and LCB and kappa=1.0
+week7 - week 9
+no significant improvement
+week 10
+Tweaks to kappa and length scale
+week11-14
+no significant improvement
 
 
 function_8
-----------------------------------------------------------------------------------------------------
+
 week1 to week5 
 Guessed the points best guess 9.942722150418
-
 week6 
 Set up GP with "EI" and xi=0.1
 week6-week8 
-no real improvment.
+no real improvement
 Week 9-14 
-played with the length scale and the nu value but no real improvment
-
-
-
+played with the length scale and the nu value but no real improvement
